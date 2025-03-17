@@ -10,11 +10,11 @@
         "gulp-webserver": "^0.9.1",
         "uglifyify": "^5.0.2"
     },
-    "name": "comaLab._html",
+    "name": "gulp_test",
     "version": "1.0.0",
-    "description": "comaLab pug&html study",
-    "repository": "https://github.com/Jeontaesu/comaLab._html.git",
-    "author": "Jeontaesu <jeontaesu@gmail.com>",
+    "description": "gulp setting test",
+    "repository": "https://github.com/jeontaesu1/gulp_test.git",
+    "author": "jeontaesu1 <jeontaesu1@frameout.co.kr>",
     "license": "MIT",
     "scripts": {
         "dev": "gulp dev",
