@@ -20,7 +20,7 @@ const routes = {
         dest: 'dist',
     },
     img: {
-        src: 'src/static/img/*',
+        src: 'src/static/img/**/*',
         dest: 'dist/static/img',
     },
     scss: {
@@ -60,7 +60,7 @@ const webserver = () =>
     gulp.src('dist').pipe(ws({ livereload: true, open: true }));
 
 const img = () =>
-    gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
+    gulp.src(routes.img.src, { encoding: false }).pipe(image()).pipe(gulp.dest(routes.img.dest));
 
 const styles = () =>
     gulp
