@@ -30,7 +30,7 @@ const routes = {
     },
     js: {
         watch: 'src/static/js/**/*.js',
-        src: 'src/static/js/main.js',
+        src: 'src/static/js/common.ui.js',
         dest: 'dist/static/js',
     },
     libs: {
@@ -84,7 +84,7 @@ const styles = () =>
 
 const js = () =>
     gulp
-        .src(routes.js.src)
+        .src(routes.js.src, { allowEmpty: true })
         .pipe(
             bro({
                 transform: [

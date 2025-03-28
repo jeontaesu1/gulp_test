@@ -1,8 +1,8 @@
 {
     "editor.tabSize": 2,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.indentSize": "tabSize",
     "editor.renderWhitespace": "all",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "off"
 }

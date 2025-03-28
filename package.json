@@ -16,6 +16,7 @@
     "repository": "https://github.com/jeontaesu1/gulp_test.git",
     "author": "jeontaesu1 <jeontaesu1@frameout.co.kr>",
     "license": "MIT",
+    "type": "module",
     "scripts": {
         "dev": "gulp dev",
         "build": "gulp build",
