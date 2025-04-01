@@ -41,6 +41,10 @@ const routes = {
         src: 'src/markup/**/*',
         dest: 'dist/markup',
     },
+    fonts: {
+        src: 'src/static/fonts/**/*',
+        dest: 'dist/static/fonts',
+    },
 };
 
 // HTML task with file include support
@@ -100,6 +104,9 @@ const libs = () => gulp.src(routes.libs.src).pipe(gulp.dest(routes.libs.dest));
 const markup = () =>
     gulp.src(routes.markup.src).pipe(gulp.dest(routes.markup.dest));
 
+const fonts = () =>
+    gulp.src(routes.fonts.src).pipe(gulp.dest(routes.fonts.dest));
+
 const ghdeploy = (cb) => {
     exec('gh-pages -d dist', (err, stdout, stderr) => {
         console.log(stdout);
@@ -115,10 +122,11 @@ const watch = () => {
     gulp.watch(routes.js.watch, js);
     gulp.watch(routes.libs.src, libs);
     gulp.watch(routes.markup.src, markup);
+    gulp.watch(routes.fonts.src, fonts);
 };
 
 const prepare = gulp.series(clean, img);
-const assets = gulp.series(html, styles, js, libs, markup);
+const assets = gulp.series(html, styles, js, libs, markup, fonts);
 const postDev = gulp.parallel(webserver, watch);
 
 export const build = gulp.series(prepare, assets);
