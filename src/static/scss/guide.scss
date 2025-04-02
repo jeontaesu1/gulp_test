@@ -1,5 +1,7 @@
-@use './base/reset';
+@use 'base/reset';
+@use 'abstracts/mixins' as mix;
 @use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
 
 .ui {
     padding-top: 7rem;

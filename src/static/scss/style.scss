@@ -1,4 +1,11 @@
 @charset "UTF-8";
 
-@use 'base/reset';
-@use 'base/fonts';
+// - abstracts #재사용 가능한 도구들
+@use './abstracts/index' as abstracts;
+
+// - base #기본 스타일
+@use './base/index' as base;
+
+// - pages #페이지별 특정 스타일
+
+// - vendors #외부 라이브러리/프레임워크 스타일

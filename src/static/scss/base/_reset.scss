@@ -1,5 +1,6 @@
 @use 'abstracts/mixins' as mix;
 @use 'abstracts/variables' as var;
+@use 'abstracts/functions' as func;
 
 * {
     margin: 0;
@@ -163,6 +164,14 @@ textarea {
         opacity: 1;
         -webkit-opacity: 1;
     }
+}
+
+/* 포커스 스타일 (접근성 강화) */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
 }
 
 input:-webkit-autofill,
