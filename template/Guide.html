@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>project._Test</title>
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
   <!-- //fonts -->
 
   <!-- css -->
@@ -137,7 +132,57 @@
       </div>
       <div id="form" class="ui__page">
         <h2 class="ui__page--title">Form</h2>
-        <div class="ui__page--cont"></div>
+        <div class="ui__page--cont">
+          <div class="forms">
+            <div class="forms__input">
+              <h3 class="forms__input__tit">1. Input Text - BasicBox</h3>
+              <div class="input__wrap">
+                <div class="input__text">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+              </div>
+              <div class="input__wrap">
+                <div class="input__label">
+                  <label class="input__lab" for="username">LABEL</label>
+                </div>
+                <div class="input__text">
+                  <input type="text" id="username" name="username" placeholder="input text" required
+                    aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <div class="input__wrap">
+                <div class="input__text">
+                  <input type="text" id="text" name="text" placeholder="input text" required disabled
+                    aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <!-- input - error -->
+              <div class="input__wrap error">
+                <div class="input__text">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                </div>
+                <p class="error-desc">잘못 입력했습니다</p>
+              </div>
+              <!-- //input - error -->
+            </div>
+            <div class="forms__input">
+              <h3 class="forms__input__tit">2. Input Text - SEARCH</h3>
+              <div class="input__wrap">
+                <div class="input__text typeSearch">
+                  <input type="text" id="text" name="text" placeholder="input text" required aria-required="true">
+                  <button class="btn-clear"><span class="a11y-hidden">clear</span></button>
+                  <button class="btn-search"><i class="icon icon-search"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="tab" class="ui__page">
         <h2 class="ui__page--title">Tab</h2>
