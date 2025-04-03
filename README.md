@@ -5,7 +5,6 @@
 - 배포 : yarn deploy (git-pages 배포)
 
 ```
-
 gulp_test
 ├─ .babelrc
 ├─ .prettierrc
@@ -106,6 +105,8 @@ gulp_test
 │        │  ├─ _reset.scss
 │        │  └─ _utility.scss
 │        ├─ components
+│        │  ├─ _icons.scss
+│        │  └─ _index.scss
 │        ├─ guide.scss
 │        ├─ layouts
 │        │  ├─ _footer.scss

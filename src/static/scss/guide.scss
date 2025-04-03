@@ -2,7 +2,7 @@
 @use 'abstracts/mixins' as mix;
 @use 'abstracts/variables' as var;
 @use 'abstracts/functions' as func;
-
+@use 'components/icon';
 .ui {
     padding-top: 7rem;
     &__nav {
@@ -115,7 +115,8 @@
                     flex-direction: column;
                     align-items: center;
                     border: 0.1rem solid var.$color-gray-30;
-                    border-radius: 2rem;
+                    // border-radius: 2rem;
+                    @include mix.border-radius(2rem);
                     overflow: hidden;
                     p {
                         display: flex;
@@ -223,10 +224,10 @@
                     }
                     // btn - radius
                     &.radiusL {
-                        border-radius: 10rem;
+                        @include mix.border-radius(10rem);
                     }
                     &.radiusS {
-                        border-radius: 0.8rem;
+                        @include mix.border-radius(0.8rem);
                     }
                     // btn - color
                     &.bg-primary {
@@ -241,6 +242,120 @@
                     &.bg-blue {
                         background: var.$color-blue-20;
                     }
+                }
+            }
+            .forms {
+                &__input {
+                    margin-bottom: 3rem;
+                    &__tit {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        margin-bottom: 1.5rem;
+                        margin-left: -2rem;
+                    }
+                }
+            }
+            .input {
+                &__wrap {
+                    margin-bottom: 1.5rem;
+                    .error-desc {
+                        display: none;
+                        font-size: 1.3rem;
+                        color: var.$color-semantic-error;
+                    }
+                    &.error {
+                        .error-desc {
+                            margin-top: 0.5rem;
+                            display: block;
+                        }
+                        .input__text {
+                            .btn-clear {
+                                display: none;
+                            }
+                        }
+                        input {
+                            border-color: var.$color-semantic-error;
+                            &:focus {
+                                border-color: var.$color-semantic-error;
+                            }
+                        }
+                    }
+                }
+                &__label {
+                    margin-bottom: 0.5rem;
+                }
+                &__text {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        min-height: 4.5rem;
+                        @include mix.border-radius(0.5rem);
+                        padding: 1rem;
+                        padding-right: 3rem;
+                        border: 1px solid #ccc;
+                        &:focus {
+                            border-color: var.$color-blue-20;
+                            outline: none;
+                        }
+                        &:disabled {
+                            color: var.$color-gray-70;
+                            cursor: not-allowed;
+                        }
+                    }
+                    .btn-clear {
+                        position: absolute;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 2rem;
+                        height: 2rem;
+                        background: var.$color-gray-40;
+                        @include mix.border-radius(50%);
+                        cursor: pointer;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s;
+                        &.on {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 1rem;
+                            height: 0.1rem;
+                            background: var.$color-white;
+                            transform: translate(-50%, -50%) rotate(140deg);
+                        }
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 1rem;
+                            height: 0.1rem;
+                            background: var.$color-white;
+                            transform: translate(-50%, -50%) rotate(-140deg);
+                        }
+                    }
+                    &.typeSearch {
+                        input {
+                            padding-right: 6rem;
+                        }
+                        .btn-search {
+                            position: absolute;
+                            right: 4rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                &__lab {
+                    color: var.$color-gray-60;
                 }
             }
         }
